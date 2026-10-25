@@ -32,7 +32,7 @@ export function Header() {
           <span className="flex h-9 w-9 items-center justify-center rounded-md bg-ink font-serif text-lg text-ink-foreground">A</span>
           <span className="leading-tight">
             <span className="block font-serif text-lg">Author Visibility Studio</span>
-            <span className="block text-xs text-muted-foreground">Independent listing review</span>
+            <span className="block text-xs text-muted-foreground">Amazon visibility support</span>
           </span>
         </Link>
         <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
@@ -55,7 +55,7 @@ export function Footer() {
         <div className="md:col-span-1">
           <p className="font-serif text-xl">Author Visibility Studio</p>
           <p className="mt-3 text-sm opacity-80">
-            Amazon visibility support — an independent team, not affiliated with Amazon. Free personalised listing audits for authors and independent publishers.
+            Amazon visibility support for authors and independent publishers. Free personalised listing audits, delivered within 24 hours depending on availability.
           </p>
           <a href={`mailto:${EMAIL}`} className="mt-4 block text-sm underline underline-offset-4">{EMAIL}</a>
         </div>
@@ -67,7 +67,7 @@ export function Footer() {
         <div className="mx-auto max-w-6xl space-y-2 px-6 py-6 text-xs opacity-75">
           <p>Studio base: Asheville, North Carolina · © 2026 Author Visibility Studio. All rights reserved.</p>
           <p>
-            Third-party disclosure: Author Visibility Studio is a third-party service and is not affiliated with or endorsed by Amazon or Kindle Direct Publishing. We never request your Amazon or Kindle Direct Publishing password, and you retain full control of your publishing account.
+            We never request your Amazon or Kindle Direct Publishing password, and you retain full control of your publishing account.
           </p>
         </div>
       </div>
@@ -119,10 +119,10 @@ export function NextStep({ title, body }: { title: string; body: string }) {
 }
 
 export const steps = [
-  { n: "01", t: "Tell us about your book", d: "Share the title, link, genre, and what you hope readers feel. Two minutes, no account access." },
+  { n: "01", t: "Tell us your book title", d: "Just the title — we confirm it with you before the audit begins. Two minutes, no account access." },
   { n: "02", t: "We personalise your audit", d: "A real person studies your title, cover, description, keywords, categories, and the competition around it." },
   { n: "03", t: "You receive your report", d: "A clear, written audit with prioritised findings and practical fixes — 100% free, yours to keep." },
-  { n: "04", t: "Optional: meet a specialist", d: "If you want help applying the changes, we ask whether you'd like an introduction to a vetted implementation specialist. No pressure." },
+  { n: "04", t: "Meet a specialist", d: "If you want help applying the changes, we ask whether you'd like us to connect you with a vetted implementation specialist who will handle the work for you." },
 ];
 
 export function meta(title: string, description: string) {

@@ -55,7 +55,7 @@ function Index() {
         </div>
       </Section>
 
-      <NextStep title="Start with a free audit of your book" body="Send the title and a link. Your personalised report arrives by email — no cost, and no commitment to anything afterwards." />
+      <NextStep title="Start with a free audit of your book" body="Send the book title. Your personalised report arrives by email within 24 hours depending on availability — no cost, and no commitment to anything afterwards." />
     </>
   );
 }

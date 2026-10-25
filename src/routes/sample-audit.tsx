@@ -38,7 +38,7 @@ function Sample() {
             </div>
           ))}
         </div>
-        <p className="mt-6 text-sm text-muted-foreground">Every report ends with one question: would you like us to connect you with a specialist to implement these changes? Saying no is completely fine.</p>
+        <p className="mt-6 text-sm text-muted-foreground">Every report ends with one question: would you like us to connect you with a specialist to implement these changes?</p>
       </Section>
       <NextStep title="Get a report like this for your book" body="Free, personalised, and yours to keep." />
     </>

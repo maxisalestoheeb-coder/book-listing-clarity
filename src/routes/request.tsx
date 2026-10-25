@@ -3,7 +3,7 @@ import { useState, type FormEvent } from "react";
 import { EMAIL, PageHero, Section, meta } from "@/components/site";
 
 export const Route = createFileRoute("/request")({
-  head: () => meta("Get Your Free Audit | Author Visibility Studio", "Tell us about your book to request a free, personalised Amazon listing audit."),
+  head: () => meta("Get Your Free Audit | Author Visibility Studio", "Send us your book title to request a free, personalised Amazon listing audit."),
   component: Request,
 });
 
@@ -14,24 +14,21 @@ function Request() {
   function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const d = new FormData(e.currentTarget);
-    const body = ["name", "email", "title", "link", "genre", "reader", "notes"].map((k) => `${k}: ${d.get(k) ?? ""}`).join("\n");
+    const body = ["name", "email", "title", "notes"].map((k) => `${k}: ${d.get(k) ?? ""}`).join("\n");
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(`Free audit request: ${d.get("title")}`)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   }
   return (
     <>
-      <PageHero eyebrow="Free audit" title="Tell us about your book">
-        Your personalised audit is 100% free. We'll email your report, then simply ask whether you'd like to be connected with a specialist.
+      <PageHero eyebrow="Free audit" title="Send us your book title">
+        Your personalised audit is 100% free. Just tell us the title — we'll confirm it with you, then begin. Your report arrives within 24 hours depending on availability, and we'll then ask whether you'd like us to connect you with a specialist.
       </PageHero>
       <Section>
         <form onSubmit={submit} className="grid gap-5 rounded-xl border bg-card p-8 md:grid-cols-2">
           <label className="text-sm font-medium">Your name<input name="name" required className={field} /></label>
           <label className="text-sm font-medium">Email<input name="email" type="email" required className={field} /></label>
-          <label className="text-sm font-medium">Book title<input name="title" required className={field} /></label>
-          <label className="text-sm font-medium">Amazon link or ASIN<input name="link" className={field} placeholder="Leave blank if not yet published" /></label>
-          <label className="text-sm font-medium">Genre<input name="genre" required className={field} /></label>
-          <label className="text-sm font-medium">Ideal reader, in one sentence<input name="reader" className={field} /></label>
-          <label className="text-sm font-medium md:col-span-2">Anything you'd like us to focus on?<textarea name="notes" rows={4} className={field} /></label>
+          <label className="text-sm font-medium md:col-span-2">Book title<input name="title" required className={field} /></label>
+          <label className="text-sm font-medium md:col-span-2">Anything you'd like us to focus on? (optional)<textarea name="notes" rows={4} className={field} /></label>
           <div className="md:col-span-2 flex flex-wrap items-center gap-4">
             <button className="rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Request My Free Audit</button>
             <p className="text-xs text-muted-foreground">We never ask for your Amazon or KDP password.</p>
