@@ -119,7 +119,7 @@ export function NextStep({ title, body }: { title: string; body: string }) {
 }
 
 export const steps = [
-  { n: "01", t: "Tell us about your book", d: "Share the title, link, genre, and what you hope readers feel. Two minutes, no account access." },
+  { n: "01", t: "Tell us your book title", d: "Just the title — we confirm it with you before the audit begins. Two minutes, no account access." },
   { n: "02", t: "We personalise your audit", d: "A real person studies your title, cover, description, keywords, categories, and the competition around it." },
   { n: "03", t: "You receive your report", d: "A clear, written audit with prioritised findings and practical fixes — 100% free, yours to keep." },
   { n: "04", t: "Meet a specialist", d: "If you want help applying the changes, we ask whether you'd like us to connect you with a vetted implementation specialist who will handle the work for you." },
