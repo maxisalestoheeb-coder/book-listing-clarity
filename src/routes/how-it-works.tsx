@@ -10,7 +10,7 @@ function HowItWorks() {
   return (
     <>
       <PageHero eyebrow="How it works" title="From your book to a clear plan, in four steps">
-        Most reports are delivered within 5 business days of receiving your book details.
+        Most reports are delivered within 24 hours of receiving your book title, depending on availability.
       </PageHero>
       <Section>
         <ol className="space-y-6">

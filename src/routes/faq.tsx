@@ -3,19 +3,19 @@ import { useState } from "react";
 import { CtaButton, EMAIL, NextStep, PageHero, Section, meta } from "@/components/site";
 
 export const Route = createFileRoute("/faq")({
-  head: () => meta("FAQ | Author Visibility Studio", "Clear answers on our free audit, guarantees, independence from Amazon, account access, timing, and specialist fees."),
+  head: () => meta("FAQ | Author Visibility Studio", "Clear answers on our free audit, guarantees, account access, timing, and specialist fees."),
   component: Faq,
 });
 
 const faqs = [
   ["Do you guarantee sales or rankings?", "No. Marketplace visibility depends on algorithms, category competition, price, reviews, seasonality, and reader behaviour — none of which a listing service controls. We offer thoughtful review and research, and we are explicit about that boundary up front."],
-  ["Are you Amazon or KDP support?", "No. We are an independent third-party team, not affiliated with or endorsed by Amazon or Kindle Direct Publishing. For account, payment, or publishing issues, contact KDP support directly."],
+  ["Are you Amazon or KDP support?", "We are an Amazon visibility support team. We focus on your listing and how readers find your book. For account, payment, or publishing issues, contact Amazon's support directly."],
   ["Do you need my Amazon password?", "Never. We review your public listing only. You keep full control of your account, and any changes are made by you — or by a specialist you choose to work with, through methods you approve."],
   ["What will I receive?", "A personalised written audit, delivered by email as a PDF. It covers your title, description, keywords, categories, cover thumbnail, and pricing context, with prioritised, practical recommendations."],
-  ["What do you need from me to begin?", "Your book title, its Amazon link (or ASIN), your genre, and a sentence about your ideal reader. Optional: any goals or concerns you'd like us to focus on."],
-  ["How long does a review take?", "Most audits are delivered within 5 business days of receiving your details. If we're busier than usual, we'll tell you when you'll hear back."],
+  ["What do you need from me to begin?", "Just your book title. We confirm it with you before the audit begins. If you'd like, you can also send a sentence about your ideal reader or anything you'd like us to focus on."],
+  ["How long does a review take?", "Most audits are delivered within 24 hours of receiving your book title, depending on availability. If we're busier than usual, we'll tell you when you'll hear back."],
   ["Can you work with a book that isn't published yet?", "Yes. Send your draft title, description, and intended categories, and we'll review them before you publish."],
-  ["How are fees and payment handled?", "The audit is 100% free — no card, no deposit. After you receive it, we ask whether you'd like an introduction to an implementation specialist. If you do, the specialist quotes their fee in writing and you agree it with them before any work starts. You're never obliged to proceed."],
+  ["How are fees and payment handled?", "The audit is 100% free — no card, no deposit. After you receive it, we ask whether you'd like us to connect you with an implementation specialist. The specialist quotes their fee in writing and you agree it with them before any work starts."],
 ];
 
 function Faq() {
@@ -29,7 +29,7 @@ function Faq() {
         <aside className="space-y-6">
           <div>
             <h2 className="text-xl">All questions</h2>
-            <p className="mt-2 text-sm text-muted-foreground">Eight answers covering guarantees, independence, access, and what you receive.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Eight answers covering guarantees, account access, timing, and what you receive.</p>
           </div>
           <div className="rounded-xl border bg-card p-6">
             <h2 className="text-xl">Something else on your mind?</h2>

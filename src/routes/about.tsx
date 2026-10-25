@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { NextStep, PageHero, Section, meta } from "@/components/site";
 
 export const Route = createFileRoute("/about")({
-  head: () => meta("About | Author Visibility Studio", "An independent, author-first team in Asheville, North Carolina offering free Amazon listing audits."),
+  head: () => meta("About | Author Visibility Studio", "An author-first Amazon visibility support team in Asheville, North Carolina offering free Amazon listing audits."),
   component: About,
 });
 
@@ -10,7 +10,7 @@ function About() {
   return (
     <>
       <PageHero eyebrow="About" title="A small, independent team that reads before it recommends">
-        Author Visibility Studio is based in Asheville, North Carolina. We are not affiliated with Amazon — we work for authors.
+        Author Visibility Studio is based in Asheville, North Carolina. We are an Amazon visibility support team — we work for authors.
       </PageHero>
       <Section>
         <div className="grid gap-6 md:grid-cols-3">
@@ -26,7 +26,7 @@ function About() {
           ))}
         </div>
       </Section>
-      <NextStep title="Let us take a look at your book" body="Send the title and a link to get your free audit." />
+      <NextStep title="Let us take a look at your book" body="Send the book title and we'll begin your free audit." />
     </>
   );
 }
